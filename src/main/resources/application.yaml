@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: image-serve-service
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+
+
+

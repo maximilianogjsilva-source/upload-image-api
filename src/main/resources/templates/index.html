@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>API Documentation</h1>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="#get-example">GET /example</a></li>
+            <li><a href="#post-users">POST /users</a></li>
+            <li><a href="#put-users-id">PUT /users/:id</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Endpoint 1: Sin autenticación -->
+        <section class="endpoint" id="get-example">
+            <div class="endpoint-header">
+                <span class="method method-get">GET</span>
+                <span class="path">/example</span>
+                <span class="badge-no-auth">Sin Auth</span>
+            </div>
+
+            <p class="description">
+                Descripción del endpoint...
+            </p>
+
+            <div class="section">
+                <div class="section-title">Autenticación</div>
+                <div class="auth-info">
+                    No requiere autenticación
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Parámetros</div>
+                <table class="params-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Requerido</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="placeholder">Agregar parámetros...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Response</div>
+                <div class="example-header">
+                    <span class="example-label">Ejemplo</span>
+                </div>
+                <pre class="example"><span class="placeholder">// Agregar ejemplo de respuesta...</span></pre>
+            </div>
+        </section>
+
+        <!-- Endpoint 2: Con autenticación -->
+        <section class="endpoint" id="post-users">
+            <div class="endpoint-header">
+                <span class="method method-post">POST</span>
+                <span class="path">/users</span>
+                <span class="badge-auth">Auth Requerida</span>
+            </div>
+
+            <p class="description">
+                Descripción del endpoint...
+            </p>
+
+            <div class="section">
+                <div class="section-title">Autenticación</div>
+                <div class="auth-info">
+                    <strong>Tipo:</strong> Bearer Token<br>
+                    <strong>Header:</strong> <code>Authorization: Bearer &lt;token&gt;</code>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Headers</div>
+                <table class="params-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Requerido</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="param-name">Authorization</td>
+                            <td class="param-type">string</td>
+                            <td><span class="param-required">Sí</span></td>
+                            <td>Token de acceso (Bearer)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Body</div>
+                <table class="params-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Requerido</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="placeholder">Agregar campos del body...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Response</div>
+                <div class="example-header">
+                    <span class="example-label">Ejemplo</span>
+                </div>
+                <pre class="example"><span class="placeholder">// Agregar ejemplo de respuesta...</span></pre>
+            </div>
+        </section>
+
+        <!-- Endpoint 3: Con autenticación -->
+        <section class="endpoint" id="put-users-id">
+            <div class="endpoint-header">
+                <span class="method method-put">PUT</span>
+                <span class="path">/users/:id</span>
+                <span class="badge-auth">Auth Requerida</span>
+            </div>
+
+            <p class="description">
+                Descripción del endpoint...
+            </p>
+
+            <div class="section">
+                <div class="section-title">Autenticación</div>
+                <div class="auth-info">
+                    <strong>Tipo:</strong> Bearer Token<br>
+                    <strong>Header:</strong> <code>Authorization: Bearer &lt;token&gt;</code>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Parámetros URL</div>
+                <table class="params-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="param-name">id</td>
+                            <td class="param-type">string</td>
+                            <td>ID del usuario a actualizar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Headers</div>
+                <table class="params-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Requerido</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="param-name">Authorization</td>
+                            <td class="param-type">string</td>
+                            <td><span class="param-required">Sí</span></td>
+                            <td>Token de acceso (Bearer)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Body</div>
+                <table class="params-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Requerido</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="placeholder">Agregar campos del body...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Response</div>
+                <div class="example-header">
+                    <span class="example-label">Ejemplo</span>
+                </div>
+                <pre class="example"><span class="placeholder">// Agregar ejemplo de respuesta...</span></pre>
+            </div>
+        </section>
+
+        <footer>
+            Documentación de API - Última actualización: <span id="date"></span>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
