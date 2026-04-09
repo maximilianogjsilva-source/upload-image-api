@@ -1,17 +1,21 @@
 package com.api.image.service;
 
-import com.api.image.domain.entity.ImageEntity;
+import com.api.image.controller.dto.ImageEntityDTO;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 public interface ImageStorageService {
 
-    Optional<ImageEntity> getImageById(Long id);
+    List<ImageEntityDTO> getAll();
 
-    Optional<ImageEntity> saveImage(MultipartFile multipartFile) throws IOException;
+    Optional<ImageEntityDTO> getImageById(Long id);
 
-    Optional<ImageEntity> deleteImage(ImageEntity imageEntity) throws IOException;
+    Optional<ImageEntityDTO> saveImage(MultipartFile multipartFile);
+
+    Optional<ImageEntityDTO> saveImage(MultipartFile multipartFile, String folder);
+
+    Optional<ImageEntityDTO> deleteImage(String fileName);
 
 }

@@ -7,6 +7,20 @@ spring:
       max-file-size: 5MB
       max-request-size: 5MB
 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
 
+
+
+
+#spring.datasource.url=${DB_URL}
+#spring.datasource.username=${DB_USER_NAME}
+#spring.datasource.password=${DB_PASSWORD}
+#spring.jpa.hibernate.ddl-auto=create
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 
